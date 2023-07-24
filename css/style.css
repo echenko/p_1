@@ -1,11 +1,11 @@
 * {
     box-sizing: border-box;
-    margin: 0 auto;
 }
 
 html{
 	width: 1440px;
 	height: 100%;
+	margin: 0 auto;
 }
 
 body {
@@ -16,14 +16,16 @@ body {
 }
 
 .header {
-	position: sticky;
-	top: 10px;
-	width: 100%;
-	background-color: wheat;
+	/* position: sticky;
+	top: 0px; */
+	padding: 0 25px;
 }
 
 .navigation {
-	display: flex;
+	/* display: flex; */
+	position: sticky;
+	top: 0px;
+
 }
 
 .input-logo {
@@ -34,17 +36,18 @@ body {
 	margin: 0;
 	text-decoration: none;
 	padding: 10px;
+	background-color: beige;
 }
 
 .input-logo:checked ~ .navigation-list {
-	width: 0px;
-	transition: all 1s;
-	opacity: 0;
+	max-width: 90%;
+	transition: all .5s;
+	opacity: 1;
 }
 
 .navigation-list {
-	transition: all 1s;
-	width: 90%;
+	transition: all .5s;
+	max-width: 0;
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
@@ -52,6 +55,8 @@ body {
 	justify-content: center;
 	overflow: hidden;
 	gap: 10px;
+	background-color: beige;
+	opacity: 0;
 }
 
 .navigation-item {
@@ -95,20 +100,28 @@ footer {
 
 @media (max-width: 767px) {
 	html{
-		width: 576px;
-		height: 100%;
+		width: 100%;
 	}
 
 	.header {
-		margin: 0;
+		/* max-height: 0; */
 	}
 
 	.navigation {
-		min-height: 0;
+		flex-direction: column;
+		align-items: flex-end;
+		max-height: 0;
 	}
 
 	.navigation-list {
 		flex-direction: column;
+		width: 100%;
+		align-items: flex-end;
+	}
+
+	.navigation-link {
+		width: 100%;
+		display: block;
 	}
 }
 
