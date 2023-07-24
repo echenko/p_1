@@ -22,7 +22,7 @@ body {
 }
 
 .navigation {
-	/* display: flex; */
+	display: flex;
 	position: sticky;
 	top: 0px;
 
