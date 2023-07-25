@@ -17,31 +17,45 @@ body {
 }
 
 .header {
-	/* position: sticky;
-	top: 0px; */
 	padding: 0 25px;
+	position: sticky;
+	top: 0;
+	display: flex;
 }
 
 .navigation {
 	display: flex;
-	position: sticky;
-	top: 0px;
-
+	gap: 10px;
 }
 
-/* .input-logo {
+.input-logo {
 	display: none;
-} */
+}
 
 .navigation-logo {
+	display: flex;
+	justify-content: end;
+	align-items: center;
 	margin: 0;
 	text-decoration: none;
-	padding: 10px;
-	background-color: beige;
+	border: 1px solid black;
+	background-color: rgba(255, 255, 255, .8);
+	border-radius: 5px;
+	gap: 10px;
 }
 
+.navigation-logo > a {
+	display: block;
+	margin: 10px;
+}
+
+.navigation-logo > svg {
+	margin: 10px;
+}
+
+
 .input-logo:checked ~ .navigation-list {
-	max-width: 90%;
+	max-width: 100%;
 	transition: all .5s;
 	opacity: 1;
 }
@@ -53,10 +67,9 @@ body {
 	padding: 0;
 	margin: 0;
 	display: flex;
-	justify-content: center;
+	align-items: center;
 	overflow: hidden;
 	gap: 10px;
-	background-color: beige;
 	opacity: 0;
 }
 
@@ -69,12 +82,26 @@ body {
 	display: block;
 	padding: 10px;
 	text-decoration: none;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, .8);
 }
 
-main {
+.main {
 	width: 100%;
-	height: 1500px;
-	background-color: cadetblue;
+	min-height: 100%;
+}
+
+.main-slide {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x proximity;
+	width: 50%;
+}
+
+.slide-image {
+	scroll-snap-align: center;
+	width: 100%;
 }
 
 footer {
@@ -104,6 +131,14 @@ footer {
 		width: 100%;
 	}
 
+	body {
+		padding: 0;
+	}
+
+	.header {
+		padding: 0;
+	}
+
 	.navigation {
 		flex-direction: column;
 		align-items: flex-end;
@@ -121,12 +156,7 @@ footer {
 
 	/* .navigation-logo {
 		width: 100%;
-	} */
-/* 
-	.label-logo {
-		width: 100%;
-		display: block;
-	} */
+	}
 
 	.navigation-list {
 		flex-direction: column;
@@ -135,10 +165,10 @@ footer {
 		/* transition: all 1s; */
 	}
 
-	/* .navigation-link {
-		display: block;
-	} */
-}
+	.navigation-item {
+		width: 100%;
+	}
+
 
 @media (max-width: 575px) {
 	html{
