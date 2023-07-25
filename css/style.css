@@ -156,6 +156,16 @@ footer {
 	.navigation-item {
 		width: 100%;
 	}
+
+	.main-slide {
+		width: 100%;
+	}
+	
+	.slide-image {
+		scroll-snap-align: center;
+		width: 100%;
+	}
+	
 }
 
 @media (max-width: 575px) {
