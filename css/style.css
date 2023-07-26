@@ -141,16 +141,28 @@ footer {
 
 	.navigation {
 		flex-direction: column;
-		text-align: right;
+		align-items: flex-end;
+		transition: all 1s;	
+		/* max-height: 0; */
+		/* position: relative; */
+	}
+
+	.input-logo:checked ~ .navigation-list {
+		max-height: 100%;
+		display: flex;
+		/* transition: all 1s; */
+
+	}
+
+	/* .navigation-logo {
 		width: 100%;
 	}
 
 	.navigation-list {
 		flex-direction: column;
-		width: 100%;
-		position: absolute;
-		top: 100%;
-		margin-top: 10px;
+		align-items: flex-end;
+		max-height: 0;
+		/* transition: all 1s; */
 	}
 
 	.navigation-item {
