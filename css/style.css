@@ -96,12 +96,12 @@ body {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x proximity;
-	width: 50%;
+	width: 400px;
 }
 
 .slide-image {
 	scroll-snap-align: center;
-	width: 100%;
+	width: 400px;
 }
 
 footer {
@@ -169,6 +169,14 @@ footer {
 		width: 100%;
 	}
 
+	.main-slide {
+		width: 100%;
+	}
+	
+	.slide-image {
+		scroll-snap-align: center;
+		width: 100%;
+	}
 
 @media (max-width: 575px) {
 	html{
