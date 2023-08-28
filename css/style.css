@@ -39,7 +39,7 @@ body {
 	margin: 0;
 	text-decoration: none;
 	border: 1px solid black;
-	background-color: rgba(255, 255, 255, .8);
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(210,69,252,0.32816876750700286) 100%);
 	border-radius: 5px;
 	gap: 10px;
 }
@@ -82,9 +82,10 @@ body {
 	display: block;
 	padding: 10px;
 	text-decoration: none;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: rgba(255, 255, 255, .8);
+	/* border: 1px solid black; */
+	/* border-radius: 5px; */
+	background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(210,69,252,0.32816876750700286) 100%);
+	color: white;
 }
 
 .main {
